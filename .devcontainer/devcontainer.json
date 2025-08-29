@@ -8,3 +8,14 @@
   "postAttachCommand": "cp -f .bashrc ~/.bashrc && . ~/.bashrc && git pull --all",
   "forwardPorts": [80]
 }
+
+{
+  "name": "LAMP setup",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "features": {
+    "ghcr.io/devcontainers/features/common-utils:2": {}
+  },
+ "postCreateCommand": "sudo apt-get update && sudo apt-get install -y git apache2 php libapache2-mod-php mariadb-server php-mysqli",
+  "postAttachCommand": "cp -f .bashrc ~/.bashrc && . ~/.bashrc && git pull --all",
+  "forwardPorts": [80]
+}
